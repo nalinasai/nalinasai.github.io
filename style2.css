@@ -13,7 +13,7 @@ body {
 }
 
 
-/* Navigation */
+
 nav {
   background: linear-gradient(90deg, #162038, #2241a5);
   color: white;
@@ -53,7 +53,7 @@ nav h1 {
   text-decoration: #68bafd;
 }
 
-/* Content Section */
+
 .content {
   display: flex;
   align-items: center;
@@ -67,7 +67,7 @@ nav h1 {
   flex-wrap: wrap;
 }
 
-/* Writing/Text */
+
 .writting {
   flex: 1;
   min-width: 300px;
@@ -100,7 +100,6 @@ nav h1 {
   line-height: 1.6;
 }
 
-/* Image Styling */
 .myimage {
   flex: 1;
   min-width: 300px;
@@ -112,8 +111,12 @@ nav h1 {
   max-width: 75%;
   height: auto;
   border-radius: 50%;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  box-shadow: 0 0 50px rgba(120, 240, 240, 0.989);
+
 }
+  
+
+
 
 .links{
     display: flex;
@@ -136,13 +139,13 @@ nav h1 {
     
 }
 
-.fb:hover,.tele:hover ,.git:hover,.medium:hover{
+.fb:hover,.tele:hover ,.git:hover,.medium:hover,.whatsapp:hover,.cvbutton:hover{
   transform: scale(1.1);
   box-shadow: 0 0 20px 2px #68bafd;
 }
 
 
-.tele,.git{
+.tele,.git,.cvbutton{
     border-radius: 50%;
     margin-right: 20px;
     margin-left: 10px;
@@ -151,13 +154,13 @@ nav h1 {
     cursor: pointer;
 }
 
-.git,.fb,.tele,.medium{
+.git,.fb,.tele,.medium,.whatsapp,.cvbutton{
   border-color: #68bafd;
   border-width: 3px;
   border-style: solid;
 }
 
-.medium{
+.medium,.whatsapp{
     border-radius: 50%;
     height: 30px;
     width: 30px;
@@ -168,7 +171,12 @@ nav h1 {
     cursor: pointer;
 }
 
-/* Responsive Design */
+.cvbutton{
+  height: 33px;
+  border-radius: 15px;
+  font-size: 15px;
+}
+
 @media (max-width: 768px) {
   .content {
     flex-direction: column;
@@ -184,4 +192,6 @@ nav h1 {
     font-size: 0.9rem;
   }
 }
+
+
 
