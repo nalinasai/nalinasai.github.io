@@ -18,32 +18,30 @@ body {
 nav {
   background: linear-gradient(90deg, #162038, #2241a5);
   color: white;
-  padding: 2rem 2rem;
   display: flex;
+  margin-top: 40px;
+  width: 86%;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+nav h1{
+  display: inline;
+  font-size: 28px;
+}
+.navul{
+  display: flex;
+ 
+  width: 50%;
+  margin-left: auto;
+  font-size: 20px;
   justify-content: space-between;
-  align-items: center;
-  margin-right:40px;
-  margin-top: 20px;
-  
   
 }
-
-nav h1 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  padding-left: 100px;
-}
-
-.navul {
-  list-style: none;
-  display: flex;
-  gap: 3rem;
+.navli{
+  display: inline;
   
-}
-
-.navli {
-  font-size: 1.3rem;
 }
 
 .navlink {
@@ -63,7 +61,7 @@ nav h1 {
   align-items: center;
   justify-content: space-between;
   padding-top: 2rem;
-  padding-left: 5%;
+  padding-left: 2%;
   padding-right: 5%;
   padding-bottom: 0;
   max-width: 1200px;
