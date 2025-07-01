@@ -372,7 +372,15 @@ nav h1 {
   font-size: 15px;
   border-radius: 10px;
   border: none;
+  padding: 5px;
+  background: transparent;
+  border-bottom: 3px rgb(34, 34, 237) solid;
 }
+
+.form input:focus,.form textarea:focus{
+  outline: none;
+}
+
 .form input,textarea{
   height: 45px;
   margin-bottom: 20px;
