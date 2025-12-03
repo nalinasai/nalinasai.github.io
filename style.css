@@ -155,7 +155,7 @@ nav h1 {
 .fb:hover,
 .tele:hover,
 .git:hover,
-.medium:hover,
+.linkedin:hover,
 .whatsapp:hover {
   transform: scale(1.1);
   box-shadow: 0 0 20px 2px #68bafd;
@@ -194,13 +194,13 @@ nav h1 {
 .git,
 .fb,
 .tele,
-.medium{
+.linkedin{
   border-color: #0b88ef;
   border-width: 3px;
   border-style: solid;
 }
 
-.medium {
+.linkedin {
   border-radius: 50%;
   height: 30px;
   width: 30px;
@@ -323,7 +323,7 @@ nav h1 {
   cursor: pointer;
 }
 
-.mediumcontact {
+.linkedincontact {
   border-radius: 50%;
   height: 30px;
   width: 30px;
@@ -332,7 +332,7 @@ nav h1 {
   cursor: pointer;
 }
 
-.fbcontact:hover, .telecontact:hover, .gitcontact:hover, .mediumcontact:hover{
+.fbcontact:hover, .telecontact:hover, .gitcontact:hover, .linkedincontact:hover{
   transform: scale(1.1);
   box-shadow: 0 0 20px 2px #68bafd;
 }
@@ -351,7 +351,7 @@ nav h1 {
   color: white; 
   height: 35px; 
   cursor: pointer; 
-  margin-top: 20px; 
+  margin-top: 0px; 
   width: auto; 
   padding-left: 10px; 
   padding-right: 10px; 
@@ -359,6 +359,8 @@ nav h1 {
   border: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+
 .buttoncontact:hover {
   transform: scale(1.1);
   box-shadow: 0 0 20px 2px #68bafd;
