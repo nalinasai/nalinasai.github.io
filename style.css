@@ -413,8 +413,8 @@ nav h1 {
   width: 86%;
   margin-left: auto;
   margin-right: auto;
-  /*border: blue 2px solid;*/
-  margin-bottom: 50px;
+  /* height: 500px; */
+  margin-bottom: 100px;
   margin-top: 80px;
   
 }
@@ -450,68 +450,112 @@ nav h1 {
     }
 
 
-    .container{
-      width: 600px;
-      height: 500px;
-      padding: 75px 90px;
-      margin-left: 120px;
-    }
+.container-skills {
+  width: 600px;
+  height: 500px;
+  /* padding: 75px 90px; */
+  margin-bottom: 150px;
+  margin-left: 100px;
+}
 
-    .heading{
-      text-align: center;
-      text-decoration: underline;
-      text-underline-offset: 10px;
-      text-decoration-thickness: 5px;
-      margin-bottom: 50px;
+.heading {
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 5px;
+  margin-bottom: 30px;
 
-    }
+}
 
-    .bar{
-      font-size: 23px;
+.bar {
+  font-size: 23px;
+  margin-bottom: 10px;
 
-    }
+}
 
-    .technical-Bars.bars{
-      margin: 40px 0;
-    }
+/* .technicalBars.bar{
+  margin:0px 0;
+} */
 
-    .technical-Bars.bars.first-child{
-      margin-top: 0;
-    }
-    .technical-Bars.bars.last-child{
-      margin-bottom: 0;
-    }
+.program-line {
+  position: relative;
+  width: 75%;
+  height: 7px;
+  background: #333;
+  border-radius: 25px;
+  overflow: hidden;
+  margin-top: 15px;
+  
+}
 
-    .technical-Bars.bars.info{
-      margin-bottom: 5px;
-    }
+.technicalBars.bar:first-child {
+  margin-top: 0;
+}
 
-    .technical-Bars.bars.info span{
-      font-size: 17px;
-      font-weight: 500;
-      animation: showText 0.5s 1s linear forwards;
-    }
+.technicalBars.bar:last-child {
+  margin-bottom: 0;
+}
 
-    .technical-Bars.bars.programline{
-      position: relative;
-      border-radius: 10px;
-      width: 100%;
-      height: 5px;
-      background-color: red;
-      animation: animate 1s cubic-bezier(1,0,0,5,1) forwards;
-      transform: scale(0);
-      transform-origin: left;
+.technicalBars.bar.info {
+  margin-bottom: 5px;
+}
 
-    }
+.technicalBars.bar.info span {
+  font-size: 17px;
+  font-weight: 500;
+  animation: showText 0.5s 1s linear forwards;
+  opacity: 0;
+}
 
-    @keyframes animate{
-      100%{
-        transform: scale(1);
-      }
-    }
+/* .technicalBars.bar.program-line {
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  height: 5px;
+  background-color: red;
+  animation: animate 1s cubic-bezier(1, 0, 0, 5, 1) forwards;
+  transform: scaleX(0);
+  transform-origin: left;
 
-    .technical-Bars.bars.programline span{
-      height: 100%;
-      background-color: #0ef;
-      position: absolute;
-    }
+} */
+
+
+
+.program-line span {
+  display: block;
+  height: 100%;
+  background: #1a90f1;
+  border-radius: 25px;
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: grow 2.5s ease forwards;
+}
+
+@keyframes grow {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+
+
+
+.program-line.html span {
+  width: 90%;
+}
+
+.program-line.css span {
+  width: 85%;
+}
+
+.program-line.javascript span {
+  width: 80%;
+}
+
+.program-line.react span {
+  width: 70%;
+}
+
+.program-line.python span {
+  width: 75%;
+}
