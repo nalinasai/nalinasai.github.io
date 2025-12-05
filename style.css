@@ -573,3 +573,15 @@ nav h1 {
 .program-line.python span {
   width: 75%;
 }
+
+.arrow{
+  
+  padding-top: 25%;
+}
+
+.arrowimage{
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+
+}

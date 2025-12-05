@@ -215,6 +215,11 @@ I am now continuing my academic journey in my third semester.</p>
                     <button class="submitbtn">Submit</button>
                 </form>
             </div>
+
+            <div class="arrow" id="arrow">
+                <a href="#home" class="arrowlink"><img src="images/up.png" alt="up arrow image" class="arrowimage"></a>
+            </div>
+
         </div>
     </section>
 
@@ -226,6 +231,7 @@ I am now continuing my academic journey in my third semester.</p>
 <script>
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".navlink");
+    const arrowlink = document.querySelectorAll(".arrowlink")
 
     window.addEventListener("scroll", () => {
         let current = "";
