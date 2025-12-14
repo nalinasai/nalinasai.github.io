@@ -5,51 +5,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>G | Nalina</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 
 
 
 </head>
 
+<nav>
+    <h1>portfolio</h1>
+    <ul class="navul">
+        <li class="navli"><a href="#home" class="navlink">Home</a></li>
+        <li class="navli"><a href="#about" class="navlink">About</a></li>
+
+        <li class="navli"><a href="#education" class="navlink">Education</a></li>
+        <li class="navli"><a href="#skills" class="navlink">Skills</a></li>
+        <li class="navli"><a href="#Contacts" class="navlink">Contacts</a></li>
+    </ul>
+</nav>
+
 <body id="home">
     <header>
         <section class="section">
-            <nav>
-                <h1>portfolio</h1>
-                <ul class="navul">
-                    <li class="navli"><a href="#home" class="navlink">Home</a></li>
-                    <li class="navli"><a href="#about" class="navlink">About</a></li>
-                    
-                    <li class="navli"><a href="#education" class="navlink">Education</a></li>
-                    <li class="navli"><a href="#skills" class="navlink">Skills</a></li>
-                    <li class="navli"><a href="#Contacts" class="navlink">Contacts</a></li>
-                </ul>
-            </nav>
+
     </header>
 
     <div class="content">
         <div class="writting">
             <p class="hello">
                 <span style="color: white; font-weight: bold;">Hello</span>
-                <span style="color: blue; font-weight: bold;">It's Me</span>
+                <span style="color: #3b82f6; font-weight: bold;">It's Me</span>
             </p>
             <p class="name">NALINA.G</p>
-            <p class="depa">And I am a Computer Science and Engineer</p>
-            <p class="bio">CSE undergraduate with a passion for full-stack development. I build clean and interactive web interfaces, develop Android applications, and create reliable backend systems. Skilled in HTML, CSS, JavaScript, Python, Java, and C++.</p>
+            <p class="depa">
+                <span class="static-text">And I am a</span>
+                <span id="dynamic-role">Computer Science & Engineer</span>
+            </p>
 
-            <div class="links">
-                <a href="https://web.facebook.com/people/Nalina-Genkeswaran/pfbid0otc8ju1eDsE33WyHaQQMA5CpERWQP6gSXYdroPPRRRf6Lu69ScAqJBKS1QpxEKwTl/"
-                    target="_blank"><img src="images/fbimg.jpg" alt="fb image" class="fb"></a>
-                <a href="https://t.me/Nalina1007" target="_blank"><img src="images/telegramimg.jpg" alt="telegram image"
-                        class="tele"></a>
-                <a href="https://github.com/nalinasai" target="_blank"><img src="images/github blue.png"
-                        alt="github image" class="git"></a>
-                <a href="https://www.linkedin.com/in/nalina-genkeswaran1007/" target="_blank"><img src="images/linkedin.png"
-                        alt="linkedin image" class="linkedin"></a>
-                <a href="CV -Nalina Genkeswaran.pdf (1).pdf" download="CV.pdf"><button class="buttoncontact"
-                        style="width: auto;">Download my CV</button></a>
+            <p class="bio">CSE undergraduate with a passion for full-stack development. I build clean and interactive
+                web interfaces, develop Android applications, and create reliable backend systems. Skilled in HTML, CSS,
+                JavaScript, Python, Java, and C++.</p>
+
+            <div class="social-icons">
+                <a href="https://github.com/nalinasai" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/nalina-genkeswaran1007/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://web.facebook.com/people/Nalina-Genkeswaran/pfbid0otc8ju1eDsE33WyHaQQMA5CpERWQP6gSXYdroPPRRRf6Lu69ScAqJBKS1QpxEKwTl/" target="_blank"><i class="fab fa-facebook"></i></a>
+                <!-- <a href="https://t.me/Nalina1007" target="_blank"><i class="fab fa-telegram"></i></a> -->
             </div>
+
+            <div class="cta-buttons">
+                <a href="Nalina-Genkeswaran.pdf" download class="btn">Download CV</a>
+                <a href="Nalina-Genkeswaran.pdf" target="_blank" class="btn-outline">View CV</a>
+            </div>
+
+
         </div>
 
         <div class="myimage">
@@ -62,199 +72,221 @@
 
     </section>
 
-    <section class="section">
-        <div class="aboutme" id="about">
-            <h1 style="text-align: center;">
-                <span style="color: white; font-size: 45px;">ABOUT</span>
-                <span style="color: blue; font-size: 45px;">ME</span>
-            </h1>
-     
-            <div class="about" >
+    <section class="section" id="about">
+  <div class="about-container">
+
+    <h1 class="section-title">
+      <span>About</span> Me
+    </h1>
+
+    <div class="about-content">
+      <!-- LEFT COLUMN: TEXT -->
+      <div class="about-left">
+        <p class="tagline">Hi! 👋</p>
+        <p class="tagline">Driven by curiosity, powered by passion,</p>
+
+        <p>
+          I'm a Android developer and a Full-Stack Web Developer. 
+          I love building interactive websites, modern backend systems, and polished Android applications.
+        </p>
+
+        <p>
+          Reading books, exploring new technologies, and solving problems are my daily passions. 
+          Chess challenges my mind and helps me think logically and strategically.
+        </p>
+
+        <p>
+          I combine creativity with analytical thinking to develop solutions that are both functional and elegant. 
+          I always look for ways to grow my skills and take on new tech challenges.
+        </p>
+      </div>
+
+      <!-- RIGHT COLUMN: CARDS -->
+      <div class="about-right">
+  <div class="card">
+    <h3>📱 Mobile App Dev</h3>
+    <p>Building Android applications with Java, and Flutter.</p>
+  </div>
+
+  <div class="card">
+    <h3>💻 Full-Stack Web</h3>
+    <p>Developing modern websites using React, Node.js, Spring Boot, and MySQL.</p>
+  </div>
+
+  <div class="card">
+    <h3>📚 Reading</h3>
+    <p>Expanding knowledge with tech books, novels, and self-growth content.</p>
+  </div>
+
+  <div class="card">
+    <h3>♟ Chess</h3>
+    <p>Enhancing strategic thinking and problem-solving skills through chess.</p>
+  </div>
+</div>
+
+    </div>
+
+  </div>
+</section>
 
 
-                <img src="images/coding with girl.jpeg" alt="coding with girl" class="codinggirl">
-                <div class="aboutdiv">
-                    <h1 class="abouth1">Hi, I'm Nalina Genkeswaran, a passionate Computer Science and Engineering
-                        student
-                        from
-                        Jaffna, Sri Lanka.</h1>
-                    <p class="aboutmepara">I earned 3A’s in the GCE A/L exams in 2023 and was ranked first at the school
-                        level. I'm skilled in HTML, CSS, JavaScript, Python, Java, and C++. My passion for front-end
-                        development. I worked as a front-end developer
-                        with
-                        the Mora Exam Committee, contributing as one of six team members. Beyond coding, I enjoy
-                        participating in hackathons and engaging with tech communities to sharpen my skills. I am a
-                        strong
-                        believer in teamwork and problem-solving, constantly seeking new challenges that push me to
-                        grow.
-                        Looking forward, I aim to become a full-stack developer, building
-                        secure and impactful applications. Feel free to explore my projects, connect with me on GitHub
-                        or
-                        Medium, or reach out if you’d like to collaborate.</p>
+    <section class="section" id="education">
+  <div class="education">
+    <h1 class="section-title">
+      <span style="color: #3b82f6; font-size: 45px;">MY</span>
+      <span style="color: white; font-size: 45px;">EDUCATION</span> <!-- optional extra word, or you can remove it -->
+    </h1>
+
+    <div class="edu-cards">
+
+      <div class="edu-card">
+        <div class="edu-icon">🎓</div>
+        <h2>Secondary Education</h2>
+        <p>Excelled in academics during school years. Secured 9 A’s in GCE O/L and ranked first in the school. Achieved 3 A’s in GCE A/L Mathematics stream, topping the school again.</p>
+      </div>
+
+      <div class="edu-card">
+        <div class="edu-icon">🏛️</div>
+        <h2>University Studies</h2>
+        <p>Currently pursuing a Computer Science & Engineering degree at Sri Lanka’s top engineering university. Achieved 3.59 GPA in the first semester and continuing academic growth in the third semester.</p>
+      </div>
+
+      <div class="edu-card">
+        <div class="edu-icon">💻</div>
+        <h2>Technical Growth</h2>
+        <p>Intermediate-level skills in Python, Java, C++, Go, React. Full-stack development using TypeScript, React, Node.js, Spring Boot, and MySQL. Android developer and frontend contributor for Mora Exam Committee.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+    <section class="section" id="skills">
+    <h1 class="section-title">
+        <span style="color: #3b82f6;">My</span>
+        <span style="color: white;">Skills</span>
+    </h1>
+
+    <div class="my-skills">
+        <!-- Technical Skills -->
+        <div class="container-skills">
+            <h2 class="heading">Technical Skills</h2>
+            <div class="technical-grid">
+                <div class="bar">
+                    <div class="info"><span>Java</span><span class="percentage-text">90%</span></div>
+                    <div class="program-line java"><span></span></div>
+                </div>
+                <div class="bar">
+                    <div class="info"><span>React</span><span class="percentage-text">80%</span></div>
+                    <div class="program-line react"><span></span></div>
+                </div>
+                <div class="bar">
+                    <div class="info"><span>Python</span><span class="percentage-text">85%</span></div>
+                    <div class="program-line python"><span></span></div>
+                </div>
+                <div class="bar">
+                    <div class="info"><span>Spring Boot</span><span class="percentage-text">75%</span></div>
+                    <div class="program-line springboot"><span></span></div>
+                </div>
+                <div class="bar">
+                    <div class="info"><span>Flutter</span><span class="percentage-text">70%</span></div>
+                    <div class="program-line flutter"><span></span></div>
+                </div>
+                <div class="bar">
+                    <div class="info"><span>CSS</span><span class="percentage-text">80%</span></div>
+                    <div class="program-line css"><span></span></div>
+                </div>
+                <div class="bar">
+                    <div class="info"><span>MySQL</span><span class="percentage-text">70%</span></div>
+                    <div class="program-line mysql"><span></span></div>
+                </div>
+                <div class="bar">
+                    <div class="info"><span>JavaScript</span><span class="percentage-text">70%</span></div>
+                    <div class="program-line javascript"><span></span></div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <section class="section">
-        <div class="education">
-            <h1 style="font-size: 40px; text-align: center;"  id="education">EDUCATION</h1>
-            <div class="edu">
-                <div class="child">
-                    <h1 class="education-child-h1">Secondary Education</h1>
-                    <p>During my school years, I consistently excelled in academics. In the GCE Ordinary Level examination, 
-                        I secured 9 A’s and ranked first in my school. Continuing this performance, I achieved 3 A’s in the 
-                        GCE Advanced Level Mathematics stream, once again becoming the school topper. </p>
+        <!-- Professional Skills -->
+        <div class="container-circle">
+            <h2 class="heading">Professional Skills</h2>
+            <div class="professional-grid">
+                <div class="radial_bar">
+                    <svg viewBox="0 0 200 200">
+                        <circle class="progress_bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">90%</div>
+                    <div class="text">Creativity</div>
                 </div>
-
-                <div class="child">
-                    <h1 class="education-child-h1">University Studies</h1>
-                    <p>I am currently pursuing my engineering degree at Sri Lanka’s No. 1 engineering university.
-In my first semester, I achieved a GPA of 3.59, which led to my selection into the highly competitive Computer Science and Engineering department.
-I am now continuing my academic journey in my third semester.</p>
+                <div class="radial_bar">
+                    <svg viewBox="0 0 200 200">
+                        <circle class="progress_bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">65%</div>
+                    <div class="text">Communication</div>
                 </div>
-
-                <div class="child">
-                    <h1 class="education-child-h1">Technical Growth</h1>
-                    <p>I have intermediate-level programming skills in Python, Java, C++, Go and React.
-                        I also work as a full-stack developer, using TypeScript, React, Node.js, Spring Boot, and MySQL to build modern applications.
-                        In addition, aslo I am an Android developer.
-                        I worked as a frontend developer for the Mora Exam Committee, where I contributed to the main website and its Finance Dashboard.</p>
+                <div class="radial_bar">
+                    <svg viewBox="0 0 200 200">
+                        <circle class="progress_bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">75%</div>
+                    <div class="text">Problem Solving</div>
                 </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <section class="section">
-        <h1 style="text-align: center; margin-bottom: 0;" id="skills">
-            <span style="color: white; font-size: 45px;">My</span>
-            <span style="color: blue; font-size: 45px;">Skills</span>
-        </h1>
-        <div class="my-skills">
-            <div class="container-skills">
-                <h1 class="heading">Technical Skills</h1>
-                <div class="technicalBars">
-                    <div class="bar"><img src="images/java.png" alt="java image" class="pro-img">
-                        <div class="info">
-                            <span>Java</span>
-                        </div>
-                        <div class="program-line html">
-                            <span></span>
-                        </div>
-                    </div>
-        
-                    <div class="bar"><img src="images/react.png" alt="react image" class="pro-img">
-                        <div class="info">
-                            <span>React</span>
-                        </div>
-                        <div class="program-line css">
-                            <span></span>
-                        </div>
-                    </div>
-        
-                    <div class="bar"><img src="images/spring boot.png" alt="spring boot" class="pro-img">
-                        <div class="info">
-                            <span>Spring Boot</span>
-                        </div>
-                        <div class="program-line javascript">
-                            <span> </span>
-                        </div>
-                    </div>
-        
-                    <div class="bar"><img src="images/flutter.jpeg" alt="flutter image" class="pro-img">
-                        <div class="info">
-                            <span>Flutter</span>
-                        </div>
-                        <div class="program-line react">
-                            <span></span>
-                        </div>
-                    </div>
-        
-                    
-                </div>
-            </div>
-        
-            <div class="container-circle">
-                <h1 class="heading">Professional Skills</h1>
-                <div class="radial_bars">
-                    <div class="radial_bar">
-                        <svg x="0px" y="0px" viewBox="0 0 200 200">
-                            <circle class="progress_bar" cx="100" cy="100" r="80"></circle>
-                            <circle class="path path-1" cx="100" cy="100" r="80"></circle>
-                        </svg>
-                        <div class="percentage">90%</div>
-                        <div class="text">Creativity</div>
-                    </div>
-                    <div class="radial_bar">
-                        <svg x="0px" y="0px" viewBox="0 0 200 200">
-                            <circle class="progress_bar" cx="100" cy="100" r="80"></circle>
-                            <circle class="path path-2" cx="100" cy="100" r="80"></circle>
-                        </svg>
-                        <div class="percentage">65%</div>
-                        <div class="text">Communication</div>
-                    </div>
-                    <div class="radial_bar">
-                        <svg x="0px" y="0px" viewBox="0 0 200 200">
-                            <circle class="progress_bar" cx="100" cy="100" r="80"></circle>
-                            <circle class="path path-3" cx="100" cy="100" r="80"></circle>
-                        </svg>
-                        <div class="percentage">75%</div>
-                        <div class="text">problem-solving</div>
-                    </div>
-                    <div class="radial_bar">
-                        <svg x="0px" y="0px" viewBox="0 0 200 200">
-                            <circle class="progress_bar" cx="100" cy="100" r="80"></circle>
-                            <circle class="path path-4" cx="100" cy="100" r="80"></circle>
-                        </svg>
-                        <div class="percentage">85%</div>
-                        <div class="text">teamwork</div>
-                    </div>
+                <div class="radial_bar">
+                    <svg viewBox="0 0 200 200">
+                        <circle class="progress_bar" cx="100" cy="100" r="80"></circle>
+                        <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+                    </svg>
+                    <div class="percentage">85%</div>
+                    <div class="text">Teamwork</div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="section">
-        <div class="contact">
-            <div class="details">
-                <h2 class="contacth2" style="font-size: 45px;"  id="Contacts">Contact Me</h2>
-                <p style="margin-top: 20px;">📧 nalinanalina995@gmail.com</p>
-                <p style="margin-top: 15px;">📞 0762791032</p>
 
-                <div class="linkscontact">
-                    <a href="https://web.facebook.com/people/Nalina-Genkeswaran/pfbid0otc8ju1eDsE33WyHaQQMA5CpERWQP6gSXYdroPPRRRf6Lu69ScAqJBKS1QpxEKwTl/"
-                        target="_blank"><img src="images/fbimg.jpg" alt="fb image" class="fbcontact"></a>
-                    <a href="https://t.me/Nalina1007" target="_blank"><img src="images/telegramimg.jpg"
-                            alt="telegram image" class="telecontact"></a>
-                    <a href="https://github.com/nalinasai" target="_blank"><img src="images/github blue.png"
-                            alt="github image" class="gitcontact"></a>
-                    <a href="https://www.linkedin.com/in/nalina-genkeswaran1007/" target="_blank"><img src="images/linkedin.png"
-                            alt="linkedin image" class="linkedincontact"></a>
+    <section class="section" id="Contacts">
+  <div class="contact">
+    
+    <!-- Contact Details -->
+    <div class="details">
+    <h2 class="contacth2">
+        <span style="color: #3b82f6;">Contact</span>
+        <span style="color: white;">Me</span>
+    </h2>
 
-                </div>
-                <!-- <a href="CV -Nalina Genkeswaran.pdf (1).pdf" download>
-                    <button class="buttoncontact">Download my CV</button>
-                </a> -->
+      <p>📧 nalinanalina995@gmail.com</p>
+      <p>📞 0762791032</p>
 
-                </div>
+      <div class="social-icons">
+        <a href="https://github.com/nalinasai" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/nalina-genkeswaran1007/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://web.facebook.com/people/Nalina-Genkeswaran/pfbid0otc8ju1eDsE33WyHaQQMA5CpERWQP6gSXYdroPPRRRf6Lu69ScAqJBKS1QpxEKwTl/" target="_blank"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
 
-            <div class="formdetils">
-                <form class="form">
-                    <input type="text" placeholder="  Your name" name="name">
-                    <input type="email" placeholder="  Your email" name="email">
-                    <textarea placeholder="  Your message" name="message"></textarea>
-                    <button class="submitbtn">Submit</button>
-                </form>
-            </div>
-
-            <div class="arrow" id="arrow">
-                <a href="#home" class="arrowlink"><img src="images/up.png" alt="up arrow image" class="arrowimage"></a>
-            </div>
-
+    <!-- Contact Form -->
+    <div class="form-container">
+      <form class="form">
+        <input type="text" placeholder="Your name" name="name" required>
+        <input type="email" placeholder="Your email" name="email" required>
+        <textarea placeholder="Your message" name="message" rows="5" required></textarea>
+        <div class="form-footer">
+          <button class="submitbtn" type="submit">Submit</button>
+          <a href="#home" class="arrowlink"><i class="fas fa-arrow-up"></i> Back to Top</a>
         </div>
-    </section>
+      </form>
+    </div>
+
+  </div>
+</section>
+
 
 
 
@@ -263,28 +295,42 @@ I am now continuing my academic journey in my third semester.</p>
 
 <script>
     const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".navlink");
-    const arrowlink = document.querySelectorAll(".arrowlink")
+const navLinks = document.querySelectorAll(".navlink");
 
-    window.addEventListener("scroll", () => {
-        let current = "";
+window.addEventListener("scroll", () => {
+    let current = "";
 
-        sections.forEach((section) => {
-            const sectionTop = section.offsetTop -100;
-            const sectionHeight = section.clientHeight;
-            if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
-                current = section.getAttribute("id");
-            }
-        });
-
-        navLinks.forEach((link) => {
-            link.classList.remove("active");
-            if (link.getAttribute("href") === `#${current}`) {
-                link.classList.add("active");
-            }
-        });
+    sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+            current = section.getAttribute("id");
+        }
     });
+
+    navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+        }
+    });
+});
+
 </script>
+<script>
+const roles = ["Computer Science & Engineer", "Full-Stack Developer", "Android Developer", "Backend Enthusiast"];
+let index = 0;
+const roleElement = document.getElementById("dynamic-role");
+
+function changeRole() {
+    roleElement.textContent = roles[index];
+    index = (index + 1) % roles.length;
+}
+
+// Change role every 2 seconds
+setInterval(changeRole, 2000);
+</script>
+
 
 
 </html>
