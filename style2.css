@@ -7,6 +7,9 @@
   --primary: #3b82f6;
   --text: #e5e7eb;
   --muted: #9ca3af;
+  scroll-behavior: smooth;
+
+
 }
 
 /* =======================
@@ -439,6 +442,134 @@ nav h1 {
     flex-direction: column;
     align-items: center;
   }
+}
+
+
+/* =======================
+   PROJECTS SECTION
+======================= */
+
+.projects-wrapper {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  padding: 20px 0;
+  scroll-behavior: smooth;
+  margin-top: 30px;
+}
+
+/* Scrollbar */
+.projects-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.projects-wrapper::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+/* Project Card */
+.project-card {
+  min-width: 320px;
+  max-width: 350px;
+  background: var(--card);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(59,130,246,0.3);
+}
+
+/* Headings */
+.project-card h3 {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 5px;
+}
+
+.project-card h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+/* Description */
+.project-desc {
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Tech Stack */
+.tech-stack {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.tech-stack span {
+  background: rgba(59,130,246,0.15);
+  color: var(--primary);
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* GitHub icon inside tech stack */
+.github-inline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1.5px solid #9ca3af;
+  color: #9ca3af;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.github-inline:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+  transform: scale(1.1);
+}
+
+/* Footer Button */
+.projects-footer {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+/* View More Button */
+.view-more-btn {
+  padding: 12px 30px;
+  background: var(--primary);
+  color: white;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  margin-bottom: 40px;
+  margin-top: 0px;
+}
+
+.view-more-btn:hover {
+  background: #2563eb;
+  transform: translateY(-3px);
 }
 
 
