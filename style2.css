@@ -899,6 +899,20 @@ nav h1 {
   }
 }
 
+/* footer */
+.footer {
+  background: #020226;
+  border-top: 1px solid #1f2937;
+  padding: 30px 20px 30px;
+ 
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
 
 
 
