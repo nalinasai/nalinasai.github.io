@@ -664,6 +664,13 @@ nav h1 {
     display: block;
     height: 100%;
     background: var(--primary);
+    width: 0;
+    animation: loadBar 2s ease forwards;
+}
+
+@keyframes loadBar{
+  from {width: 0;}
+  to {width: var(--level);}
 }
 
 /* Progress widths for skills */
@@ -714,7 +721,12 @@ nav h1 {
     stroke-width: 10;
     fill: transparent;
     stroke-dasharray: 502;
+    stroke-dashoffset: 502; 
+    transition: stroke-dashoffset 2s ease;
 }
+
+
+
 
 .path-1 { stroke-dashoffset: 50; }
 .path-2 { stroke-dashoffset: 175; }

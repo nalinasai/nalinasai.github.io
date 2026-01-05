@@ -295,35 +295,35 @@
         <div class="technical-grid">
           <div class="bar">
             <div class="info"><span>Java</span><span class="percentage-text">90%</span></div>
-            <div class="program-line java"><span></span></div>
+            <div class="program-line java"><span style="--level:90%"></span></div>
           </div>
           <div class="bar">
             <div class="info"><span>React</span><span class="percentage-text">80%</span></div>
-            <div class="program-line react"><span></span></div>
+            <div class="program-line react"><span style="--level:80%"></span></div>
           </div>
           <div class="bar">
             <div class="info"><span>Python</span><span class="percentage-text">85%</span></div>
-            <div class="program-line python"><span></span></div>
+            <div class="program-line python"><span style="--level:85%"></span></div>
           </div>
           <div class="bar">
             <div class="info"><span>Spring Boot</span><span class="percentage-text">75%</span></div>
-            <div class="program-line springboot"><span></span></div>
+            <div class="program-line springboot"><span style="--level:75%"></span></div>
           </div>
           <div class="bar">
             <div class="info"><span>Flutter</span><span class="percentage-text">70%</span></div>
-            <div class="program-line flutter"><span></span></div>
+            <div class="program-line flutter"><span style="--level:70%"></span></div>
           </div>
           <div class="bar">
             <div class="info"><span>CSS</span><span class="percentage-text">80%</span></div>
-            <div class="program-line css"><span></span></div>
+            <div class="program-line css"><span style="--level:80%"></span></div>
           </div>
           <div class="bar">
             <div class="info"><span>MySQL</span><span class="percentage-text">70%</span></div>
-            <div class="program-line mysql"><span></span></div>
+            <div class="program-line mysql"><span style="--level:70%"></span></div>
           </div>
           <div class="bar">
             <div class="info"><span>JavaScript</span><span class="percentage-text">70%</span></div>
-            <div class="program-line javascript"><span></span></div>
+            <div class="program-line javascript"><span style="--level:70%"></span></div>
           </div>
         </div>
       </div>
@@ -332,36 +332,36 @@
       <div class="container-circle">
         <h2 class="heading">Professional Skills</h2>
         <div class="professional-grid">
-          <div class="radial_bar">
+          <div class="radial_bar" data-percent="90">
             <svg viewBox="0 0 200 200">
               <circle class="progress_bar" cx="100" cy="100" r="80"></circle>
-              <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+              <circle class="path" cx="100" cy="100" r="80"></circle>
             </svg>
-            <div class="percentage">90%</div>
+            <div class="percentage">0%</div>
             <div class="text">Creativity</div>
           </div>
-          <div class="radial_bar">
+                    <div class="radial_bar" data-percent="65">
             <svg viewBox="0 0 200 200">
               <circle class="progress_bar" cx="100" cy="100" r="80"></circle>
-              <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+              <circle class="path" cx="100" cy="100" r="80"></circle>
             </svg>
-            <div class="percentage">65%</div>
+            <div class="percentage">0%</div>
             <div class="text">Communication</div>
           </div>
-          <div class="radial_bar">
+          <div class="radial_bar" data-percent="75">
             <svg viewBox="0 0 200 200">
               <circle class="progress_bar" cx="100" cy="100" r="80"></circle>
-              <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+              <circle class="path" cx="100" cy="100" r="80"></circle>
             </svg>
-            <div class="percentage">75%</div>
+            <div class="percentage">0%</div>
             <div class="text">Problem Solving</div>
           </div>
-          <div class="radial_bar">
+          <div class="radial_bar" data-percent="85">
             <svg viewBox="0 0 200 200">
               <circle class="progress_bar" cx="100" cy="100" r="80"></circle>
-              <circle class="path path-4" cx="100" cy="100" r="80"></circle>
+              <circle class="path" cx="100" cy="100" r="80"></circle>
             </svg>
-            <div class="percentage">85%</div>
+            <div class="percentage">0%</div>
             <div class="text">Teamwork</div>
           </div>
         </div>
@@ -438,7 +438,7 @@
   <footer class="footer">
     <div class="footer-container">
       <p class="footer-name">
-        © 2025 <span>Nalina G</span>. All Rights Reserved.
+        © 2026 <span>Nalina G</span>. All Rights Reserved.
       </p>
     </div>
   </footer>
@@ -540,9 +540,39 @@ setInterval(changeRole, 2000);
 
 
     alert("Thank you for contacting me! I will get back to you soon.");
-    this.reset(); // Reset the form fields
+    this.reset(); 
   });
 </script>
+
+<script>
+document.querySelectorAll('.radial_bar').forEach(bar => {
+  const percent = bar.getAttribute('data-percent');
+  const circle = bar.querySelector('.path');
+  const text = bar.querySelector('.percentage');
+
+  const radius = 80;
+  const circumference = 2 * Math.PI * radius;
+  const offset = circumference - (percent / 100) * circumference;
+
+ 
+  setTimeout(() => {
+    circle.style.strokeDashoffset = offset;
+  }, 300);
+
+ 
+  let count = 0;
+  const interval = setInterval(() => {
+    if (count >= percent) {
+      text.textContent = percent + "%";
+      clearInterval(interval);
+    } else {
+      count++;
+      text.textContent = count + "%";
+    }
+  }, 20);
+});
+</script>
+
 
 
 
