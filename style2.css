@@ -580,191 +580,126 @@ nav h1 {
     margin-bottom: 50px;
 }
 
-/* Technical Skills Heading */
-.container-skills .heading {
-    text-align: center;   /* Center the heading */
-    font-size: 28px;
-    margin-bottom: 30px;
-    text-decoration: underline;
-    text-underline-offset: 6px;
+/* Titles */
+.section-title {
+  text-align: center;
+  font-size: 45px;
+  margin-bottom: 50px;
 }
 
-/* Professional Skills Heading */
-.container-circle .heading {
-    text-align: center;   /* Center the heading */
-    font-size: 28px;
-    margin-bottom: 30px;
-    text-decoration: underline;
-    text-underline-offset: 6px;
+.heading {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+  text-decoration: underline;
+  text-underline-offset: 6px;
 }
 
-
-/* My Skills container */
+/* Layout */
 .my-skills {
-    width: 90%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    justify-content: center;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
 }
 
 /* Technical Skills */
 .container-skills {
-    flex: 1 1 450px;
+  flex: 1 1 450px;
 }
 
 .technical-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns, 3 rows automatically */
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
 .bar {
-    background: var(--card);
-    border-radius: 15px;
-    padding: 12px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.bar:hover {
-    transform: translateY(-5px);
-}
-
-.bar .info span {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color: var(--text);
+  background: var(--card);
+  border-radius: 15px;
+  padding: 12px;
 }
 
 .bar .info {
-    display: flex;
-    justify-content: space-between; /* Skill name on left, percentage on right */
-    align-items: center;
-    margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
-
-.percentage-text {
-    font-weight: 600;
-    color: var(--text);
-}
-
 
 .program-line {
-    width: 100%;
-    height: 5px;
-    background: #1f2937;
-    border-radius: 10px;
-    overflow: hidden;
+  width: 100%;
+  height: 6px;
+  background: #1f2937;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .program-line span {
-    display: block;
-    height: 100%;
-    background: var(--primary);
-    width: 0;
-    animation: loadBar 2s ease forwards;
+  display: block;
+  height: 100%;
+  width: 0;
+  background: var(--primary);
+  transition: width 2s ease;
 }
-
-@keyframes loadBar{
-  from {width: 0;}
-  to {width: var(--level);}
-}
-
-/* Progress widths for skills */
-.program-line.java span { width: 90%; }
-.program-line.react span { width: 80%; }
-.program-line.python span { width: 85%; }
-.program-line.springboot span { width: 75%; }
-.program-line.flutter span { width: 70%; }
-.program-line.css span { width: 80%; }
-.program-line.mysql span{width: 70%;}
-.program-line.javascript span{width: 70%;}
 
 /* Professional Skills */
 .container-circle {
-    flex: 1 1 400px;
+  flex: 1 1 400px;
 }
 
 .professional-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
-    gap: 30px;
-    justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-items: center;
 }
 
 .radial_bar {
-    position: relative;
-    width: 150px;
-    height: 150px;
+  position: relative;
+  width: 150px;
+  height: 150px;
 }
 
 .radial_bar svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-90deg);
-    width: 150px;
-    height: 150px;
+  transform: rotate(-90deg);
 }
 
 .progress_bar {
-    stroke: #1f2937;
-    stroke-width: 10;
-    fill: transparent;
+  stroke: #1f2937;
+  stroke-width: 10;
+  fill: transparent;
 }
 
 .path {
-    stroke: var(--primary);
-    stroke-width: 10;
-    fill: transparent;
-    stroke-dasharray: 502;
-    stroke-dashoffset: 502; 
-    transition: stroke-dashoffset 2s ease;
+  stroke: var(--primary);
+  stroke-width: 10;
+  fill: transparent;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
+  transition: stroke-dashoffset 2s ease;
 }
 
-
-
-
-.path-1 { stroke-dashoffset: 50; }
-.path-2 { stroke-dashoffset: 175; }
-.path-3 { stroke-dashoffset: 125; }
-.path-4 { stroke-dashoffset: 75; }
-
 .percentage {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-weight: 600;
-    color: var(--text);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .text {
-    position: absolute;
-    bottom: -25px;
-    width: 100%;
-    text-align: center;
-    color: var(--text);
-    font-weight: 500;
+  position: absolute;
+  bottom: -25px;
+  width: 100%;
+  text-align: center;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .my-skills {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .technical-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .professional-grid {
-        grid-template-columns: 1fr 1fr;
-    }
+  .technical-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 
