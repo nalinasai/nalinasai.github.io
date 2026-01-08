@@ -686,7 +686,7 @@ section {
 }
 
 /* Layout */
-.my-skills {
+/* .my-skills {
   width: 90%;
   margin: auto;
   display: flex;
@@ -695,7 +695,7 @@ section {
   justify-content: center;
 }
 
-/* Technical Skills */
+
 .container-skills {
   flex: 1 1 450px;
 }
@@ -734,7 +734,7 @@ section {
   transition: width 2s ease;
 }
 
-/* Professional Skills */
+
 .container-circle {
   flex: 1 1 400px;
 }
@@ -785,13 +785,50 @@ section {
   text-align: center;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .technical-grid {
     grid-template-columns: 1fr;
   }
+} */
+
+
+
+/* myskills */
+.skills-simple {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
 }
 
+.skill-group {
+  margin-bottom: 40px;
+}
+
+.skill-group h2 {
+  color: #3b82f6;
+  margin-bottom: 20px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.skill-tags span {
+  background: #1f2933;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.skill-tags span:hover {
+  background: #3b82f6;
+  transform: translateY(-3px);
+}
 
 
 /* CONTACT SECTION */
