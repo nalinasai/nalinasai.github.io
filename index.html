@@ -594,6 +594,7 @@ menuToggle.addEventListener("click", () => {
 document.querySelectorAll(".navlink").forEach(link => {
   link.addEventListener("click", () => {
     navMenu.classList.remove("active");
+    menuToggle.classList.remove("open");
   });
 });
 </script>

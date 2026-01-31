@@ -86,29 +86,26 @@ nav h1 {
 }
 
 /* Hamburger icon */
+/* Hamburger icon hidden on desktop */
 .menu-toggle {
-  display: none; 
+  display: none;
 }
 
+/* Mobile screens */
 @media (max-width: 768px) {
+
+  /* Show hamburger */
   .menu-toggle {
     display: flex;
-  }
-}
-
-
-@media (max-width: 768px) {   
-
-  .menu-toggle {
     width: 30px;
     height: 25px;
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
     z-index: 1001; 
   }
 
+  /* Hamburger lines */
   .menu-toggle span {
     display: block;
     height: 3px;
@@ -118,18 +115,20 @@ nav h1 {
     transition: all 0.3s ease;
   }
 
+  /* Transform hamburger to cross when open */
   .menu-toggle.open span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+    transform: rotate(45deg) translate(7px, 7px); /* wider X */
   }
 
   .menu-toggle.open span:nth-child(2) {
-    opacity: 0;
+    opacity: 0; /* middle bar hidden */
   }
 
   .menu-toggle.open span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+    transform: rotate(-45deg) translate(7px, -7px); /* wider X */
   }
 }
+
 
 
 /* MOBILE STYLES */
