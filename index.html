@@ -74,7 +74,7 @@
 
     <div class="myimage">
       <!-- <img src="images/myimgcircle.png" alt="My Image"> -->
-       <img src="images/MyLatest2.jpg" alt="My Image">
+       <img src="images/mypic.jpg" alt="My Image">
     </div>
 
   </div>
@@ -363,7 +363,7 @@
 
 
 
-  <!-- <section class="section" id="Contacts">
+  <section class="section" id="Contacts">
     <div class="contact">
 
       
@@ -387,7 +387,13 @@
 
       
       <div class="form-container">
-        <form class="form" id="contactForm">
+        <form 
+          class="form"
+          action="https://formspree.io/f/xzdvwkgp"
+          method="POST"
+        >
+
+          <input type="hidden" name="_subject" value="New portfolio Contact Message">
           <input type="text" placeholder="Your name" name="name" required>
           <input type="email" placeholder="Your email" name="email" required>
           <textarea placeholder="Your message" name="message" rows="5" required></textarea>
@@ -399,15 +405,15 @@
       </div>
 
     </div>
-  </section> -->
+  </section>
 
-  <section class="contact" id="Contacts">
+  <!-- <section class="contact" id="Contacts">
   <div class="contact-container">
     <h2 class="section-title"><span>Contact</span> Me</h2>
 
     <div class="contact-details">
       <p>📧 <a href="mailto:nalinanalina995@gmail.com">nalinanalina995@gmail.com</a></p>
-      <!-- <p>📞 <a href="tel:+94762791032">+94 76 279 1032</a></p> -->
+      
     </div>
 
     <div class="social-icons">
@@ -422,7 +428,7 @@
       <a href="Professional CV Resume (2).pdf" target="_blank" class="btn-outline">View CV</a>
     </div>
   </div>
-</section>
+</section> -->
 
   <!-- Back to Top Button -->
 <a href="#home" class="arrowlink"><i class="fas fa-arrow-up"></i> Back to Top</a>
@@ -498,7 +504,7 @@ setInterval(changeRole, 2000);
 
 </script>
 
-<script>
+<!-- <script>
   document.getElementById("contactForm").addEventListener("submit", async function(event) {
     event.preventDefault(); // Prevent the default form submission
 
@@ -535,7 +541,7 @@ setInterval(changeRole, 2000);
     alert("Thank you for contacting me! I will get back to you soon.");
     this.reset(); 
   });
-</script>
+</script> -->
 
 <script>
 const skillsSection = document.querySelector('#skills');

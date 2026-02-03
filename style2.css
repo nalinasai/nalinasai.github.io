@@ -866,7 +866,7 @@ section {
 
 
 /* CONTACT SECTION */
-/* .contact {
+.contact {
   width: 90%;
   max-width: 1200px;
   margin: 80px auto;   
@@ -915,10 +915,10 @@ section {
   color: #3b82f6;
   border-color: #3b82f6;
   transform: scale(1.1);
-} */
+}
 
 /* FORM */
-/* .form-container {
+.form-container {
   flex: 1 1 400px;
 }
 
@@ -969,7 +969,7 @@ section {
 
 .submitbtn:hover {
   background: #2563eb;
-} */
+}
 
 
    /* CONTACT SECTION */
