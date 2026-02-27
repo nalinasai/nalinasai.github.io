@@ -1,0 +1,204 @@
+/* =============================
+   DAILY THOUGHTS PREMIUM MODERN UI
+============================= */
+
+:root {
+  --thought-bg: linear-gradient(135deg, #020226, #04043a);
+  --thought-card: rgba(11, 16, 47, 0.85);
+  --thought-primary: #3b82f6;
+  --thought-text: #e5e7eb;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--thought-bg);
+  color: var(--thought-text);
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.thought-nav-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 18px 6%;
+  backdrop-filter: blur(12px);
+  background: rgba(2, 2, 38, 0.85);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  
+}
+
+/* Back Button */
+.read-btn {
+  padding: 12px 22px;
+  background: linear-gradient(135deg, #1d4ed8, #2563eb);
+  color: white;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+  display: inline-block;
+  margin-left: 0px;
+  margin-bottom: 40px;
+  
+}
+
+.read-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.35);
+}
+
+/* Main Section */
+.thought-main-section {
+  width: min(92%, 1100px);
+  margin: auto;
+  padding: 140px 0 80px;
+}
+
+/* Heading */
+.thought-heading {
+  text-align: center;
+  font-size: clamp(32px, 6vw, 52px);
+  margin-bottom: 70px;
+  letter-spacing: 1px;
+  margin-top: 0px;
+  
+}
+
+.thought-heading .primary {
+  color: var(--thought-primary);
+}
+
+.thought-heading .light {
+  color: #ffffff;
+}
+
+/* Grid Layout (Modern Feed Style) */
+.thought-grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+/* Card */
+.thought-note-card {
+  background: var(--thought-card);
+  padding: 30px;
+  border-radius: 24px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(59, 130, 246, 0.08);
+}
+
+.thought-note-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(59, 130, 246, 0.25);
+}
+
+.thought-note-title {
+  font-size: 22px;
+  color: white;
+  margin-bottom: 18px;
+}
+
+.thought-note-text {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--thought-text);
+}
+
+/* =============================
+   RESPONSIVE DESIGN
+============================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .thought-main-section {
+    padding: 120px 0 60px;
+  }
+
+  .thought-grid-wrapper {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 24px;
+    
+  }
+
+  .thought-note-text {
+    font-size: 30px;
+    line-height: 1.85;
+  }
+
+   .read-btn {
+    padding: 18px 18px;
+    font-size: 30px;
+  }
+}
+
+/* Mobile & Small Screens (Important Fix) */
+@media (max-width: 768px) {
+  .thought-nav-bar {
+    padding: 16px 5%;
+  }
+
+  .read-btn {
+    padding: 18px 18px;
+    font-size: 30px;
+  }
+
+  /* ⭐ Keep 2-column layout */
+  .thought-grid-wrapper {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 18px;
+    
+  }
+
+  .thought-note-card {
+    padding: 24px;
+    border-radius: 18px;
+  }
+
+  .thought-note-text {
+    font-size: 30px;
+    line-height: 1.85;
+  }
+}
+
+/* Very Small Mobile */
+@media (max-width: 480px) {
+  .thought-heading {
+    font-size: 28px;
+  }
+
+  /* Still 2 columns (feed style mobile UI) */
+  .thought-grid-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .thought-note-card {
+    padding: 20px;
+  }
+
+  .thought-note-title {
+    font-size: 20px;
+  }
+
+  .thought-note-text {
+    font-size: 30px;
+    line-height: 1.85;
+  }
+
+   .read-btn {
+    padding: 18px 18px;
+    font-size: 30px;
+  }
+}
