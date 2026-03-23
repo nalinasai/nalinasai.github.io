@@ -1,4 +1,8 @@
 /* General Body */
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background: #1e1e2f;
@@ -6,6 +10,135 @@ body {
   line-height: 1.8;
   margin: 0;
   padding: 0;
+  padding-top: 100px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  height: 100px;
+  z-index: 1000;
+  background: rgba(2, 2, 38, 0.95);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+}
+
+nav h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.navul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navlink {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navlink:hover {
+  color: #3b82f6;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    width: 30px;
+    height: 25px;
+    margin-left: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+
+  .menu-toggle.open span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+
+  .menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+
+  nav {
+    height: 80px;
+    padding: 0 20px;
+  }
+
+  .navul {
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: rgba(2, 2, 38, 0.98);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px;
+    overflow-y: auto;
+    transition: right 0.4s ease;
+  }
+
+  .navul.active {
+    right: 0;
+  }
+
+  .navlink {
+    font-size: 18px;
+  }
+
+  body {
+    padding-top: 80px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  nav h1 {
+    font-size: 22px;
+  }
+
+  .navul {
+    justify-content: flex-start;
+    gap: 18px;
+    padding-top: 40px;
+  }
+
+  .navlink {
+    font-size: 17px;
+  }
 }
 
 /* Blog Container */
