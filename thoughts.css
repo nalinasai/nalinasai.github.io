@@ -21,20 +21,112 @@ body {
   color: var(--thought-text);
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
+  padding-top: 100px;
 }
 
 /* Navbar */
-.thought-nav-bar {
+nav {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  padding: 18px 6%;
-  backdrop-filter: blur(12px);
-  background: rgba(2, 2, 38, 0.85);
+  height: 100px;
+  padding: 0 5%;
+  backdrop-filter: blur(8px);
+  background: rgba(2, 2, 38, 0.95);
   z-index: 1000;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  
+}
+
+nav h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.navul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navlink {
+  color: var(--thought-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navlink:hover {
+  color: var(--thought-primary);
+}
+
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    width: 30px;
+    height: 25px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+
+  .menu-toggle.open span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+
+  .menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+
+  nav {
+    height: 80px;
+    padding: 0 20px;
+  }
+
+  .navul {
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: rgba(2, 2, 38, 0.98);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    transition: right 0.4s ease;
+  }
+
+  .navul.active {
+    right: 0;
+  }
+
+  body {
+    padding-top: 80px;
+  }
 }
 
 /* Back Button */
@@ -61,7 +153,7 @@ body {
 .thought-main-section {
   width: min(92%, 1100px);
   margin: auto;
-  padding: 140px 0 80px;
+  padding: 60px 0 80px;
 }
 
 /* Heading */
@@ -124,7 +216,7 @@ body {
 /* Tablet */
 @media (max-width: 1024px) {
   .thought-main-section {
-    padding: 120px 0 60px;
+    padding: 40px 0 60px;
   }
 
   .thought-grid-wrapper {
@@ -134,25 +226,22 @@ body {
   }
 
   .thought-note-text {
-    font-size: 30px;
-    line-height: 1.85;
+    font-size: 16px;
+    line-height: 1.8;
   }
 
    .read-btn {
-    padding: 18px 18px;
-    font-size: 30px;
+    padding: 10px 16px;
+    font-size: 15px;
   }
 }
 
 /* Mobile & Small Screens (Important Fix) */
 @media (max-width: 768px) {
-  .thought-nav-bar {
-    padding: 16px 5%;
-  }
-
   .read-btn {
-    padding: 18px 18px;
-    font-size: 30px;
+    padding: 10px 16px;
+    font-size: 15px;
+    margin-bottom: 24px;
   }
 
   /* ⭐ Keep 2-column layout */
@@ -163,13 +252,21 @@ body {
   }
 
   .thought-note-card {
-    padding: 24px;
+    padding: 20px;
     border-radius: 18px;
   }
 
+  .thought-note-title {
+    font-size: 20px;
+  }
+
   .thought-note-text {
-    font-size: 30px;
-    line-height: 1.85;
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  .thought-main-section {
+    padding: 32px 0 50px;
   }
 }
 
@@ -177,6 +274,7 @@ body {
 @media (max-width: 480px) {
   .thought-heading {
     font-size: 28px;
+    margin-bottom: 36px;
   }
 
   /* Still 2 columns (feed style mobile UI) */
@@ -189,16 +287,16 @@ body {
   }
 
   .thought-note-title {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .thought-note-text {
-    font-size: 30px;
-    line-height: 1.85;
+    font-size: 14px;
+    line-height: 1.7;
   }
 
    .read-btn {
-    padding: 18px 18px;
-    font-size: 30px;
+    padding: 9px 14px;
+    font-size: 14px;
   }
 }
