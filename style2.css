@@ -1280,22 +1280,6 @@ section {
   .formdetils {
     width: 100%;
   }
-  h1{
-
-    margin: 20px;
-  }
-  .menu-toggle{
-    margin: 15px;
-  }
-
-  .navul{
-    display: none;
-    flex-direction: column;
-    width: 100%;
-  }
-  .navul.active{
-    display: flex;
-  }
 }
 
 
@@ -1374,10 +1358,12 @@ section {
 
 .daily-thoughts-box {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 40px 0;
+  justify-content: start;
   padding: 20px;
+  margin-bottom: 20px;
+  width: 90%;
+  margin: auto;
+ 
 }
 
 .daily-thoughts-box h3 {
@@ -1393,8 +1379,8 @@ section {
 .blog-btn {
   display: inline-block;
   padding: 10px 20px;
-  background: var(--primary);
-  color: white;
+  background: #1d4ed8;
+  color: #ffffff;
   border-radius: 10px;
   text-decoration: none;
   font-weight: 600;
@@ -1405,7 +1391,8 @@ section {
 
 .blog-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 25px rgba(59, 130, 246, 0.5);
+  background: #1e40af;
+  box-shadow: 0 14px 30px rgba(30, 64, 175, 0.45);
 }
 
 /* Back Navigation Link */
@@ -1517,7 +1504,7 @@ section {
   padding: 20px 0;
   scroll-behavior: smooth;
   margin-top: 30px;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 }
 
 .blogs-scroll::-webkit-scrollbar {
@@ -1535,23 +1522,32 @@ section {
 .blog-card {
   min-width: 320px;
   max-width: 350px;
-  background: var(--card);
+  background: #0b102f;
+  border: 1px solid rgba(147, 197, 253, 0.22);
   border-radius: 20px;
   padding: 25px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 12px 30px rgba(2, 6, 23, 0.58), 0 2px 10px rgba(59, 130, 246, 0.18);
+  transition: transform 0.32s ease, box-shadow 0.32s ease, border-color 0.32s ease;
   flex-shrink: 0;
+  margin-bottom: 0px;
+  cursor: pointer;
 }
 
 .blog-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(59,130,246,0.3);
+  transform: translateY(-9px);
+  border-color: rgba(147, 197, 253, 0.55);
+  box-shadow: 0 22px 45px rgba(2, 6, 23, 0.72), 0 8px 24px rgba(59, 130, 246, 0.28);
+}
+
+.blog-card:focus {
+  outline: 2px solid #93c5fd;
+  outline-offset: 3px;
 }
 
 .blog-card h2 {
   font-size: 22px;
   margin-bottom: 15px;
-  color: white;
+  color: #f8fafc;
 }
 
 
@@ -1559,19 +1555,20 @@ section {
 
 .blog-desc {
   font-size: 16px;
-  color: var(--text);
+  color: #dbeafe;
   margin-bottom: 15px;
   line-height: 1.6;
 }
 
 
 .read-btn {
-  color: var(--primary);
+  color: #93c5fd;
   font-weight: 600;
   text-decoration: none;
 }
 
 .read-btn:hover {
+  color: #ffffff;
   text-decoration: underline;
 }
 
