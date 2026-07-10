@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building DebtLens #1</title>
+    <link rel="stylesheet" href="blog1.css">
+    <link rel="stylesheet" href="debtlens-blog.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <h1>portfolio</h1>
+
+        <ul class="navul" id="navMenu">
+            <li><a href="index.html#home" class="navlink">Home</a></li>
+            <li><a href="index.html#about" class="navlink">About</a></li>
+            <li><a href="index.html#education" class="navlink">Education</a></li>
+            <li><a href="index.html#projects" class="navlink">Projects</a></li>
+            <li><a href="index.html#blogs" class="navlink">Blogs</a></li>
+            <li><a href="index.html#skills" class="navlink">Skills</a></li>
+            <li><a href="index.html#Contacts" class="navlink">Contacts</a></li>
+        </ul>
+
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <header class="hero">
+        <span class="badge">🚀 Building DebtLens • Blog #1</span>
+        <h1>Why Technical Debt Is Quietly Slowing Down Small Software Teams</h1>
+        <img src="images/debtlens-blog1.png" class="cover" alt="DebtLens Cover">
+    </header>
+    <main class="container">
+        <section class="progress-card">
+            <h3>Building Progress</h3>
+            <ul>
+                <li>🔍 Research</li>
+                <li>📐 Architecture</li>
+                <li>💻 Development</li>
+                <li>🤖 Machine Learning</li>
+                <li>☁️ Deployment</li>
+                <li>🚀 Product Launch</li>
+            </ul>
+        </section>
+        <p class="lead">Every software project begins with clean code, exciting ideas, and ambitious goals. As deadlines
+            become tighter, developers introduce temporary fixes, TODO comments, and quick workarounds. Individually
+            these decisions seem harmless, but together they slowly become technical debt.</p>
+        <blockquote>“Technical debt isn't created overnight. It grows silently with every shortcut we choose not to
+            revisit.”</blockquote>
+        <h2>What Is Technical Debt?</h2>
+        <p>Technical debt is the cost of choosing a faster solution today instead of the best long-term solution. It
+            allows teams to move quickly in the short term, but if left unmanaged it makes software harder to
+            understand, maintain, and extend.</p>
+        <div class="highlight">
+            <h3>Common Examples</h3>
+            <ul>
+                <li>Temporary fixes that become permanent.</li>
+                <li>Long methods that keep growing.</li>
+                <li>Unused or duplicated code.</li>
+                <li>TODO comments left unresolved.</li>
+                <li>Missing documentation.</li>
+            </ul>
+        </div>
+        <h2>Why Small Teams Struggle</h2>
+        <p>Small software teams build features, fix production bugs, review code, and maintain existing systems with
+            limited resources. Refactoring is often postponed until later—and later rarely comes.</p>
+        <h2>Existing Tools Help, But...</h2>
+        <p>Tools such as SonarQube, CodeScene, and DeepSource provide valuable static analysis. However, they often
+            generate many warnings without helping teams decide what should be fixed first.</p>
+        <h2>Introducing DebtLens</h2>
+        <p>DebtLens is an AI-powered technical debt analytics platform designed to help software teams understand
+            repository health, detect technical debt, predict defect-prone components, and prioritize refactoring using
+            machine learning.</p>
+        <div class="about">
+            <h3>About DebtLens</h3>
+            <p>This blog series documents the complete journey of building DebtLens—from research and architecture to
+                machine learning, deployment, and launch.</p>
+        </div>
+        <div class="next">
+            <h3>Next Article →</h3>
+            <h2>Why Existing Code Analysis Tools Still Leave Developers Guessing</h2>
+            <p>We'll compare current tools, identify their limitations, and explain the motivation behind DebtLens.</p>
+        </div>
+        <a class="button" href="index.html#blogs">← Back to Blogs</a>
+    </main>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', function () {
+            menuToggle.classList.toggle('open');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.navlink').forEach(function (link) {
+            link.addEventListener('click', function () {
+                menuToggle.classList.remove('open');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
