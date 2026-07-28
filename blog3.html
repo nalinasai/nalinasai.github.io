@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building DebtLens #2</title>
+
+    <link rel="stylesheet" href="blog1.css">
+    <link rel="stylesheet" href="debtlens-blog.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <nav>
+        <h1>portfolio</h1>
+
+        <ul class="navul" id="navMenu">
+            <li><a href="index.html#home" class="navlink">Home</a></li>
+            <li><a href="index.html#about" class="navlink">About</a></li>
+            <li><a href="index.html#education" class="navlink">Education</a></li>
+            <li><a href="index.html#projects" class="navlink">Projects</a></li>
+            <li><a href="index.html#blogs" class="navlink">Blogs</a></li>
+            <li><a href="index.html#skills" class="navlink">Skills</a></li>
+            <li><a href="index.html#Contacts" class="navlink">Contacts</a></li>
+        </ul>
+
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <span class="badge">🚀 Building DebtLens • Blog #2</span>
+
+        <h1>Why Existing Code Analysis Tools Still Leave Developers Guessing</h1>
+
+        <img src="images/debtlens-blog2.png" class="cover" alt="DebtLens Blog 2 Cover">
+    </header>
+
+    <main class="container">
+
+        <section class="progress-card">
+            <h3>Building Progress</h3>
+            <ul>
+                <li>✅ Research</li>
+                <li>🔍 Tool Analysis</li>
+                <li>📐 Architecture</li>
+                <li>💻 Development</li>
+                <li>🤖 Machine Learning</li>
+                <li>☁️ Deployment</li>
+            </ul>
+        </section>
+
+        <p class="lead">
+            In the previous article, we explored how technical debt quietly accumulates in software projects.
+            During that research, one question kept coming back:
+            <strong>If excellent code analysis tools already exist, why do so many teams still struggle to manage technical debt?</strong>
+            This article explores that question and explains why it became one of the biggest motivations behind building DebtLens.
+        </p>
+
+        <blockquote>
+            "The challenge isn't finding more issues—it's knowing which ones deserve your attention first."
+        </blockquote>
+
+        <h2>Looking Beyond Technical Debt</h2>
+
+        <p>
+            When I began researching technical debt, I assumed the hardest part would be detecting it.
+            Modern software engineering already offers powerful tools capable of automatically analyzing source code.
+            But after exploring several leading platforms, I realized developers don't suffer from a lack of information—they often have too much of it.
+        </p>
+
+        <p>
+            Instead of asking <em>"Where are the problems?"</em>, teams are asking
+            <em>"Which problems should we solve first?"</em>
+        </p>
+
+        <h2>What Existing Tools Do Well</h2>
+
+        <div class="highlight">
+            <h3>SonarQube</h3>
+            <p>
+                SonarQube performs static code analysis to identify bugs, code smells,
+                duplicated code, security vulnerabilities, and maintainability issues.
+                Quality Gates help teams stop low-quality code from reaching production,
+                making it one of the industry's most trusted code quality platforms.
+            </p>
+        </div>
+
+        <div class="highlight">
+            <h3>CodeScene</h3>
+            <p>
+                CodeScene goes beyond source code by analyzing Git history and developer activity.
+                It identifies hotspots—areas that are both complex and frequently modified—helping
+                teams understand where engineering effort is concentrated.
+            </p>
+        </div>
+
+        <div class="highlight">
+            <h3>DeepSource</h3>
+            <p>
+                DeepSource integrates directly into the development workflow,
+                automatically reviewing pull requests and detecting bugs,
+                security issues, performance improvements, and maintainability concerns.
+                It can even recommend automatic fixes for certain problems.
+            </p>
+        </div>
+
+        <h2>These Tools Are Excellent</h2>
+
+        <p>
+            After researching these platforms, one thing became very clear:
+            they are incredibly valuable. They help teams improve code quality,
+            reduce security risks, maintain coding standards, and detect problems
+            long before software reaches production.
+        </p>
+
+        <p>
+            The issue isn't that these tools fail.
+            The issue is what happens after they finish analyzing your repository.
+        </p>
+
+        <h2>The Real Challenge Isn't Finding Issues</h2>
+
+        <p>
+            Imagine opening a repository report that contains:
+        </p>
+
+        <div class="highlight">
+            <ul>
+                <li>387 code smells</li>
+                <li>42 duplicated code blocks</li>
+                <li>29 complex methods</li>
+                <li>15 security vulnerabilities</li>
+                <li>118 maintainability issues</li>
+            </ul>
+        </div>
+
+        <p>
+            Now imagine someone asking:
+        </p>
+
+        <blockquote>
+            "Which five issues should we fix this sprint?"
+        </blockquote>
+
+        <p>
+            That's where the real challenge begins.
+            Not every warning carries the same business impact.
+            Not every code smell deserves immediate attention.
+            Prioritization is often much harder than detection.
+        </p>
+
+        <h2>The Reality for Small Software Teams</h2>
+
+        <p>
+            Small teams constantly balance feature development, production support,
+            code reviews, documentation, and maintenance.
+            With limited engineering time, refactoring everything simply isn't realistic.
+        </p>
+
+        <div class="highlight">
+            <h3>Daily Trade-Offs</h3>
+            <ul>
+                <li>Fix production bugs</li>
+                <li>Review pull requests</li>
+                <li>Deliver new features</li>
+                <li>Maintain existing systems</li>
+                <li>Reduce technical debt</li>
+            </ul>
+        </div>
+
+        <p>
+            These aren't purely technical decisions—they're prioritization decisions.
+        </p>
+
+        <h2>How This Changed DebtLens</h2>
+
+        <p>
+            Originally, I planned to build another repository analysis tool.
+            But after studying existing platforms, I realized another analyzer wasn't what developers needed.
+        </p>
+
+        <p>
+            Instead, DebtLens aims to complement existing tools by helping teams answer questions like:
+        </p>
+
+        <div class="highlight">
+            <ul>
+                <li>Which files are most likely to become problematic?</li>
+                <li>Which components carry the highest engineering risk?</li>
+                <li>What should be refactored first?</li>
+                <li>Where will limited engineering effort have the greatest impact?</li>
+            </ul>
+        </div>
+
+        <h2>Looking Ahead</h2>
+
+        <p>
+            Answering these questions requires much more than static analysis.
+            DebtLens combines repository structure, code complexity, Git history,
+            Self-Admitted Technical Debt (SATD), defect prediction, and machine learning
+            to help developers make better engineering decisions—not simply discover more issues.
+        </p>
+
+        <div class="about">
+            <h3>About DebtLens</h3>
+
+            <p>
+                DebtLens is an AI-powered Technical Debt Analytics platform designed to help software teams
+                understand repository health, predict engineering risk, prioritize refactoring,
+                and make smarter maintenance decisions using machine learning.
+            </p>
+        </div>
+
+        <div class="next">
+            <h3>Next Article →</h3>
+
+            <h2>Designing DebtLens: From Idea to Architecture</h2>
+
+            <p>
+                In the next article, I'll explain how DebtLens was designed,
+                why specific technologies were selected,
+                and how repository analysis, machine learning,
+                and visualization come together in a single platform.
+            </p>
+        </div>
+
+        <a class="button" href="index.html#blogs">← Back to Blogs</a>
+
+    </main>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', function () {
+            menuToggle.classList.toggle('open');
+            navMenu.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.navlink').forEach(function (link) {
+            link.addEventListener('click', function () {
+                menuToggle.classList.remove('open');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+
+</body>
+
+</html>
